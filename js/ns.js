@@ -4,9 +4,8 @@
 
 /*eslint 'no-console': 0*/
 
-//Get the button:
 
-/** code by webdevtrick ( https://webdevtrick.com) **/
+/* code by webdevtrick ( https://webdevtrick.com) */
 document.addEventListener('DOMContentLoaded', function () {
     let gototop = document.querySelector('.gototop');
     let body = document.documentElement;
@@ -47,4 +46,32 @@ function animate(options) {
         options.draw(progress);
         timeFraction < 1 && requestAnimationFrame(animate);
     });
+}
+
+/* */
+
+var coll = document.getElementsByClassName("searchbutton");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+        this.classList.toggle("searchbotton");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+}
+
+window.onscroll = function () {
+    myFunction()
+};
+
+function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("scroll").style.width = scrolled + "%";
 }

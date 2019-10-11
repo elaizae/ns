@@ -15,108 +15,25 @@ nav {
     background: #ffc917;
     margin: 0;
     overflow: hidden;
-    height: 3.5em;
+    height: 4em;
     width: 100%;
     z-index: 520;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     position: fixed;
-
-
 }
 
-.banner img {
-    width: 100%;
-    margin-top: 3em;
-
+ul {
+    display: flex;
 }
 
-.banner {
-    position: relative;
-
-
+li:nth-child(2) {
+    justify-content: flex-end;
 }
-
-h1 {
-    font-family: sans-serif;
-    font-size: 2.6em;
-    font-weight: bolder;
-    color: #003082;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-
-}
-
-
-.search {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-shadow: 1px 1px 0 rgba(7, 7, 33, .35), 0 0 30px rgba(7, 7, 33, .25);
-
-}
-
-.searchTerm {
-    float: right;
-    width: 100%;
-    padding: 5px;
-    height: 20px;
-    outline: none;
-    border-radius: 20px;
-
-
-}
-
-.searchTerm:focus {
-    color: black;
-}
-
-.searchButton:hover {
-    background-color: #ffc917;
-}
-
-.searchButton {
-    position: absolute;
-    right: -50px;
-    width: 40px;
-    height: 36px;
-    background: #003082;
-    text-align: center;
-    color: #fff;
-    cursor: pointer;
-    font-size: 20px;
-    border-radius: 20px;
-
-}
-
-/*Resize the wrap to see the search bar change!*/
-
-.wrapsearch {
-    position: absolute;
-}
-
-.wrap {
-    margin-top: 70px;
-    width: 30%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 
 li {
     list-style: none;
 }
-
-
-
-
 
 .ns {
     width: 3.25rem;
@@ -148,6 +65,39 @@ img.link2 {
 
 }
 
+
+
+.banner img {
+    width: 100%;
+    margin-top: 3em;
+
+}
+
+.banner {
+    position: relative;
+
+
+}
+
+.title {
+    font-family: sans-serif;
+    font-size: 2em;
+    font-weight: bolder;
+    color: #003082;
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    z-index: 500;
+    transform: translate(-50%, -50%);
+
+
+}
+
+
+
+
+
+
 /* naar boven knop */
 .gototop {
     cursor: pointer;
@@ -163,6 +113,7 @@ img.link2 {
     right: 30px;
     margin-right: -30px;
     opacity: 0;
+    z-index: 500;
     transition: opacity .3s ease, margin-right .5s ease-out;
 }
 
@@ -192,10 +143,15 @@ img.link2 {
     transform: rotate(-45deg);
 }
 
+.sortcontainer {
+    display: flex;
+}
+
 .sort {
+    align-items: flex-start;
     margin-left: 10px;
     cursor: pointer;
-    width: 10%;
+    height: 40px;
     background-color: transparent;
     border: 2px solid #ffc917;
     border-radius: 0.6em;
@@ -210,9 +166,74 @@ img.link2 {
     color: white;
 }
 
+/* search button css from https://codepen.io/omarsherifs/pen/KGLYYW but tweaked to touch on mobile and styled with my website's theme*/
 
+.search {
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+    background: #003082;
+    height: 25px;
+    border-radius: 0.6em;
+    padding: .5em 1em;
+    margin-bottom: 10px;
+
+}
+
+
+.zoekknop {
+
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 4;
+}
+
+.search:focus-within > .searchButton {
+
+    background: #ffc917;
+
+}
+
+.searchButton {
+    font-size: 16px;
+    float: right;
+    width: 50px;
+    height: 100%;
+    border-radius: 0.2em;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.searchInput {
+    border: none;
+    background: none;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 30px;
+    width: 0px;
+
+}
+
+.search:hover > .searchButton {
+
+    color: #ffc917;
+}
+
+.search:focus-within > .searchInput {
+
+    width: 180px;
+    padding: 0 6px;
+}
 
 .container {
+    margin-top: 3em;
     display: grid;
     justify-content: center;
 
@@ -220,10 +241,20 @@ img.link2 {
 }
 
 
-.wrapsearch {
-    position: absolute;
-    float: none;
+
+/* animatie */
+
+@keyframes mymove {
+    from {
+        left: -500%;
+    }
+
+    to {
+        left: 200%;
+    }
 }
+
+
 
 .relative {
     position: relative;
@@ -275,11 +306,11 @@ img.link2 {
     border: solid white 2px;
     background-color: white;
     border-radius: 20px;
-    max-height: 40em;
-    animation-name: schrijver;
+    max-height: 50em;
+    /* animation-name: schrijver;
     animation-duration: 4s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: linear;*/
 
 }
 
@@ -300,12 +331,15 @@ img.link2 {
 }
 
 .comments {
+    position: relative;
+
     display: flex;
-    justify-content: flex-start space-between;
+    justify-content: flex-end space-between;
     align-items: baseline;
 }
 
 .comments p {
+
     margin: 5px;
     font-style: italic;
     color: grey;
@@ -365,12 +399,16 @@ footer {
     background: #ffc917;
     margin: 0;
     border-radius: 20px 20px 0 0;
-    padding: 1em;
+    padding: 1.1em;
     text-align: center;
 }
 
+footer p {
+    margin-top: 0px;
+}
+
 h3 {
-    margin: 0;
+    margin-top: 0;
 }
 
 .vragen {
@@ -389,6 +427,7 @@ textarea {
     box-sizing: border-box;
     resize: vertical;
     display: inline-block;
+    position: relative;
 }
 
 label {
@@ -409,21 +448,53 @@ input[type=submit] {
 
 
 
+.mytrain {
+    width: 50%;
+    position: absolute;
+    animation: mymove 8s infinite;
+    animation-timing-function: linear;
+    z-index: 4;
 
+
+
+}
 
 @media(min-width: 40em) {
     .container {
         grid-template-columns: 50% 50%;
+    }
+
+    .sort {
+
+        width: 10%;
+
+    }
+
+
+
+}
+
+@media(min-width: 80em) {
+    .container {
+        grid-template-columns: 30% 30% 30%;
 
 
     }
 
-}
+    .search:hover > .searchInput {
+        width: 280px;
+        padding: 0 6px;
+    }
 
-@media(min-width: 70em) {
-    .container {
-        grid-template-columns: 30% 30% 30%;
 
+    .searchBox:hover > .searchInput {
+        width: 300px;
+        padding: 0 2px;
+    }
+
+
+    .search:hover > .searchButton {
+        background: #ffc917;
 
     }
 
