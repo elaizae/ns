@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #e7e7e9;
+    margin: 0;
+}
+
+
+
+nav {
+    box-shadow: 0 0.125rem 0 0 rgba(7, 7, 33, .15);
+    background: #ffc917;
+    margin: 0;
+    overflow: hidden;
+    height: 3.5em;
+    width: 100%;
+    z-index: 520;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: fixed;
+
+
+}
+
+.banner img {
+    width: 100%;
+    margin-top: 3em;
+
+}
+
+.banner {
+    position: relative;
+
+
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 2.6em;
+    font-weight: bolder;
+    color: #003082;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+
+.search {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px 0 rgba(7, 7, 33, .35), 0 0 30px rgba(7, 7, 33, .25);
+
+}
+
+.searchTerm {
+    float: right;
+    width: 100%;
+    padding: 5px;
+    height: 20px;
+    outline: none;
+    border-radius: 20px;
+
+
+}
+
+.searchTerm:focus {
+    color: black;
+}
+
+.searchButton:hover {
+    background-color: #ffc917;
+}
+
+.searchButton {
+    position: absolute;
+    right: -50px;
+    width: 40px;
+    height: 36px;
+    background: #003082;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 20px;
+
+}
+
+/*Resize the wrap to see the search bar change!*/
+
+.wrapsearch {
+    position: absolute;
+}
+
+.wrap {
+    margin-top: 70px;
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+li {
+    list-style: none;
+}
+
+
+
+
+
+.ns {
+    width: 3.25rem;
+    height: 1.25rem;
+    float: left;
+    display: block;
+    margin-top: 0px;
+}
+
+img.link3 {
+
+    height: 1.25em;
+    float: right;
+    justify-content: flex-end;
+
+}
+
+img.link1 {
+    float: right;
+    height: 1.25em;
+    margin-left: 5px;
+
+}
+
+
+img.link2 {
+    display: flex;
+    height: 5em;
+
+}
+
+/* naar boven knop */
+.gototop {
+    cursor: pointer;
+    position: fixed;
+    display: block;
+    box-sizing: border-box;
+    height: 50px;
+    width: 50px;
+    border: none;
+    background-color: #003082;
+    border-radius: 0.6em;
+    bottom: 50px;
+    right: 30px;
+    margin-right: -30px;
+    opacity: 0;
+    transition: opacity .3s ease, margin-right .5s ease-out;
+}
+
+.visible {
+    transition: opacity .3s ease, margin-right .5s ease-out;
+    margin-right: 0px;
+    opacity: 1;
+}
+
+.gototop::before,
+.gototop::after {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 2px;
+    background-color: #fff;
+    top: 16px;
+}
+
+.gototop::before {
+    left: 18px;
+    transform: rotate(45deg);
+}
+
+.gototop::after {
+    right: 18px;
+    transform: rotate(-45deg);
+}
+
+.sort {
+    margin-left: 10px;
+    cursor: pointer;
+    width: 10%;
+    background-color: transparent;
+    border: 2px solid #ffc917;
+    border-radius: 0.6em;
+    font-size: 1em;
+    padding: .5em 1em;
+    transition-duration: .5s;
+    text-align: center;
+}
+
+.sort:hover {
+    box-shadow: 0 0 40px 40px #ffc917 inset;
+    color: white;
+}
+
+
+
+.container {
+    display: grid;
+    justify-content: center;
+
+
+}
+
+
+.wrapsearch {
+    position: absolute;
+    float: none;
+}
+
+.relative {
+    position: relative;
+}
+
+.preview {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.previewr {
+    position: absolute;
+    left: 85%;
+    top: 5%;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+#saved {
+    display: none;
+    position: absolute;
+    left: 85%;
+    top: 5%;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+
+
+.verhaal {
+
+    box-shadow: 0 0.125rem 0 0 rgba(7, 7, 33, .15);
+    border-spacing: 0;
+    padding: 0.5em;
+    margin: 0.8em;
+    border: solid white 2px;
+    background-color: white;
+    border-radius: 20px;
+    max-height: 40em;
+    animation-name: schrijver;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+
+
+.verhaal .save {
+    position: relative;
+    top: 20px;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.comments {
+    display: flex;
+    justify-content: flex-start space-between;
+    align-items: baseline;
+}
+
+.comments p {
+    margin: 5px;
+    font-style: italic;
+    color: grey;
+}
+
+.lezen {
+    cursor: pointer;
+    margin-left: auto;
+    height: 100%;
+    width: 40%;
+    background-color: transparent;
+    border: 2px solid #003082;
+    border-radius: 0.6em;
+    font-size: 1em;
+    padding: .5em 1em;
+    float: right;
+    transition-duration: .5s;
+    text-decoration: none;
+    text-align: center;
+}
+
+a:visited {
+    color: #003082;
+}
+
+.lezen:hover {
+    box-shadow: 0 0 40px 40px #003082 inset;
+    color: white;
+}
+
+
+aside {
+    box-shadow: 0 0.125rem 0 0 rgba(7, 7, 33, .15);
+    border-spacing: 0;
+    padding: 1em;
+    margin: 0.8em;
+    background-color: #003082;
+    border-radius: 20px;
+    grid-column: 1 / -1;
+    color: white;
+}
+
+@keyframes schrijver {
+    from {
+        border-color: white;
+    }
+
+    to {
+        border-color: #ffc917;
+    }
+}
+
+
+
+footer {
+    box-shadow: 0 0 0 0.125rem rgba(7, 7, 33, .15);
+    background: #ffc917;
+    margin: 0;
+    border-radius: 20px 20px 0 0;
+    padding: 1em;
+    text-align: center;
+}
+
+h3 {
+    margin: 0;
+}
+
+.vragen {
+    grid-template-columns: 33%;
+    display: grid;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+footer input[type=text],
+textarea {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #003082;
+    border-radius: 6px;
+    box-sizing: border-box;
+    resize: vertical;
+    display: inline-block;
+}
+
+label {
+    padding: 12px 10px 2px 0;
+    display: inline-block;
+    float: left;
+}
+
+input[type=submit] {
+    background-color: #003082;
+    color: white;
+    padding: 12px 20px;
+    margin: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+
+
+@media(min-width: 40em) {
+    .container {
+        grid-template-columns: 50% 50%;
+
+
+    }
+
+}
+
+@media(min-width: 70em) {
+    .container {
+        grid-template-columns: 30% 30% 30%;
+
+
+    }
+
+}
