@@ -11,6 +11,7 @@ body {
 }
 
 nav {
+    position: fixed;
     box-shadow: 0 0.125rem 0 0 rgba(7, 7, 33, .15);
     background: #ffc917;
     margin: 0;
@@ -20,7 +21,7 @@ nav {
     z-index: 5;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
-    position: fixed;
+
 }
 
 nav a {
@@ -398,10 +399,6 @@ article a:hover {
     box-shadow: 0 0 2.5rem 2.5rem #003082 inset;
     color: white;
 }
-
-
-
-
 
 
 
