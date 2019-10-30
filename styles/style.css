@@ -361,12 +361,12 @@ article img {
 }
 
 
-article>div {
+article > div {
     display: flex;
     position: relative;
 }
 
-article>div>p {
+article > div > p {
     justify-content: flex-end;
     margin: 0.3rem;
     font-style: italic;
