@@ -1,204 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+
+
 body {
-    font-family: sans-serif;
-    background-color: #e7e7e9;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #003082;
     margin: 0;
 
+
 }
 
-@keyframes kleur {
-    from {
-        background-image: linear-gradient(transparent, #ffc917, #e7e7e9);
-    }
-
-    to {
-        background-image: linear-gradient(transparent, #003082, #e7e7e9);
-    }
-}
 
 nav {
     box-shadow: 0 0.125rem 0 0 rgba(7, 7, 33, .15);
     background: #ffc917;
-
-    height: 3.5em;
+    margin: 0;
+    max-height: 4em;
     width: 100%;
-    z-index: 1;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    position: fixed;
+    padding: 0;
+    z-index: 5;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
 
+    position: fixed;
+}
+
+nav a {
+    font-size: 1.1em;
+}
+
+ul {
+    padding: 0;
+    display: flex;
 
 }
 
 li {
+    font-style: bold;
     list-style: none;
+    margin: 0.8em;
+    margin-top: 0;
+}
+
+li:nth-child(2) {
+    margin-left: auto;
+
+
 }
 
 .ns {
-    width: 3.25rem;
-    height: 1.25rem;
-    float: left;
-    display: block;
-    margin-top: 0px;
-}
-
-
-
-.banner {
-    position: static;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    padding-top: 4em;
-}
-
-.container {
-    display: grid;
-    justify-content: center;
+    margin: 0;
+    width: 4rem;
 
 
 }
 
-.container p {
-    font-size: 12px;
+
+
+
+
+h1 {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.3em;
+    -webkit-text-stroke: 0.01em white;
+    -webkit-text-fill-color: transparent;
+    position: fixed;
+    font-size: 4em;
+    left: 0;
+    top: 0;
+    margin-top: 11em;
+    transform-origin: 0% 0%;
+    transform: rotate(-90deg);
+    z-index: 2;
+    text-transform: uppercase;
 }
 
-
-.relative {
-    position: relative;
-}
-
-.preview {
-    position: relative;
-    display: block;
-    margin-left: 2px;
-    margin-right: 2px;
-    width: 60%;
-    border-radius: 20px;
-}
-
-.previewr {
-    position: absolute;
-    left: 85%;
-    top: 5%;
-    color: white;
-    font-size: 12px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+article {
+    padding-top: 5em;
+    line-height: 1.2;
+    margin: 0 2em 0 4em;
 
 }
 
-#saved {
-    display: none;
-    position: absolute;
-    left: 85%;
-    top: 5%;
-    color: white;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+article > p {
 
-}
-
-
-
-.verhaal {
-    box-shadow: 0 0.125rem 0 0 rgba(7, 7, 33, .15);
-    border-spacing: 0;
-    padding: 0.5em;
-    margin: 0.8em;
+    border-radius: 1em;
+    padding: 1.2em;
     background-color: white;
-    border-radius: 20px;
-    max-height: 40em;
-
-}
-
-.verhaal p {
-    max-width: 60%;
-}
-
-balk {
-    z-index: 8;
-    position: relative;
-    width: 100%;
-    height: 10px;
-    background: #ccc;
+    margin: 0 0 1em;
 }
 
 
-.scrollbalk {
-    height: 10px;
-    background: #003082;
-    width: 0%;
-}
 
-.comments {
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-}
 
-.comments p {
-    margin: 5px;
-    font-style: italic;
-    color: grey;
-}
+footer {
 
-.lezen {
-    cursor: pointer;
-    margin-left: auto;
-    height: 100%;
-    width: 40%;
-    background-color: transparent;
-    border: 2px solid #003082;
-    border-radius: 0.6em;
-    font-size: 12px;
-    padding: .5em .5em;
-    transition-duration: 0.4s;
-    text-decoration: none;
-    text-align: center;
-}
-
-a:visited {
-    color: #003082;
-}
-
-.lezen:hover {
-    box-shadow: 0 0 40px 40px #003082 inset;
-    color: white;
-}
-
-#hi {
-
-    background-color: white;
-    max-width: 60%;
-    min-width: 60%;
-    padding: 5em;
-    margin: auto;
-    margin-bottom: 2em;
     overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 0.125rem 0 0 rgba(7, 7, 33, .15);
+    box-shadow: 0 0 0 0.125rem rgba(7, 7, 33, .15);
+    background: #ffc917;
+    margin: 0;
+    border-radius: 1.25rem 1.25rem 0 0;
+    padding: 1.1em;
+    text-align: center;
+
 }
 
-h3 {
-    color: #003082;
-    margin: 1px 10em;
+footer p {
+    margin-top: 0;
 }
 
 @media(min-width: 40em) {
-    .container {
+    article {
+        display: grid;
         grid-template-columns: 33% 33% 33%;
-
-
+        grid-gap: 1rem;
     }
 }
 
-@media(min-width: 70em) {
-    .container {
-        grid-template-columns: 20% 20% 20%;
-
-
-    }
+@media(min-width: 80em) {}
