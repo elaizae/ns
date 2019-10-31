@@ -62,7 +62,7 @@ h1 {
     font-family: 'Anton', sans-serif;
     position: absolute;
     margin-left: 0.2em;
-    top: 15%;
+    top: 4%;
     color: #003082;
     font-size: 3.5em;
     text-transform: uppercase;
@@ -587,12 +587,11 @@ footer svg {
             align-items: baseline;
         }
 
-        footer > form {
-            display: flex;
-        }
+
 
         footer input,
-        textarea {
+        textarea,
+        button {
             display: inline-flex;
             align-items: baseline;
         }
