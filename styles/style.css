@@ -333,7 +333,7 @@ article > div {
 
 article > div > p {
     justify-content: flex-end;
-    margin: 0.3rem;
+    margin: 0 0.3rem;
     font-style: italic;
     color: grey;
 }
