@@ -162,7 +162,7 @@ section svg {
     color: white;
     font-size: 1rem;
     transition: 0.4s;
-    line-height: 1.875rem;
+    line-height: 1.5rem;
     width: 0;
 
 }
@@ -172,7 +172,6 @@ section svg {
 }
 
 .search:focus-within > .searchInput {
-
     width: 15rem;
     padding: 0 0.6rem;
 }
