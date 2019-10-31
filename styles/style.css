@@ -338,6 +338,7 @@ article > div > p {
     color: grey;
 }
 
+
 article a {
     justify-content: flex-end;
     cursor: pointer;
@@ -348,7 +349,7 @@ article a {
     border-radius: 0.6em;
     font-size: 1em;
     padding: .5em 1em;
-    margin-left: 7.5em;
+    align-self: flex-end;
     transition-duration: .5s;
     text-decoration: none;
     text-align: center;
@@ -356,6 +357,8 @@ article a {
 
 
 }
+
+
 
 
 
