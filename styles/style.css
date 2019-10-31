@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-
-
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -35,7 +34,6 @@ ul {
 }
 
 li {
-    font-style: bold;
     list-style: none;
     margin: 0.8em;
     margin-top: 0;
@@ -61,14 +59,13 @@ header > img:nth-child(2) {
 }
 
 h1 {
-    text-align:left;
+    font-family: 'Anton', sans-serif;
     position: absolute;
+    margin-left: 0.2em;
     top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: darkblue;
-    font-size: 3em;
-    font-weight: bolder;
+    color: #003082;
+    font-size: 3.5em;
+    text-transform: uppercase;
 }
 
 .cls-1 {
@@ -86,6 +83,7 @@ h1 {
     stroke-linecap: round;
     stroke-linejoin: round;
 }
+
 section {
     display: flex;
 }
@@ -140,15 +138,13 @@ section svg {
 }
 
 .search:focus-within > .searchButton {
-
     background: #ffc917;
 
 }
 
 .searchButton {
-    font-size: 1rem;
     float: right;
-    width: 3.125rem;
+    width: 2rem;
     height: 100%;
     border-radius: 0.2em;
     background: none;
@@ -172,7 +168,6 @@ section svg {
 }
 
 .search:hover > .searchButton {
-
     color: #ffc917;
 }
 
@@ -185,8 +180,6 @@ section svg {
 main {
     display: grid;
     justify-content: center;
-
-
 }
 
 section h2 {
@@ -564,6 +557,10 @@ footer svg {
             grid-template-columns: 30% 30% 30%;
 
 
+        }
+
+        h1 {
+            font-size: 5.5em;
         }
 
 
