@@ -2,16 +2,23 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-
-
 body {
+    background: url(../images/round.svg);
     font-family: 'Open Sans', sans-serif;
     background-color: #003082;
     margin: 0;
-
-
+    animation: move 20s linear infinite;
 }
 
+@-webkit-keyframes move {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -400px 0;
+    }
+}
 
 nav {
     box-shadow: 0 0.125rem 0 0 rgba(7, 7, 33, .15);
@@ -23,7 +30,6 @@ nav {
     z-index: 5;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
-
     position: fixed;
 }
 
@@ -34,7 +40,6 @@ nav a {
 ul {
     padding: 0;
     display: flex;
-
 }
 
 li {
@@ -46,18 +51,12 @@ li {
 
 li:nth-child(2) {
     margin-left: auto;
-
-
 }
 
 .ns {
     margin: 0;
     width: 4rem;
-
-
 }
-
-
 
 
 
@@ -66,6 +65,7 @@ h1 {
     letter-spacing: 0.3em;
     -webkit-text-stroke: 0.01em white;
     -webkit-text-fill-color: transparent;
+
     position: fixed;
     font-size: 4em;
     left: 0;
@@ -78,22 +78,31 @@ h1 {
 }
 
 article {
+
     padding-top: 5em;
     line-height: 1.2;
     margin: 0 2em 0 4em;
 
 }
 
+h2 {
+    font-size: 1em;
+    color: white;
+    text-align: center;
+}
+
 article > p {
 
-    border-radius: 1em;
+    color: white;
     padding: 1.2em;
-    background-color: white;
     margin: 0 0 1em;
 }
 
-
-
+article > p::first-letter {
+    font-family: 'Anton', sans-serif;
+    color: #ffc917;
+    font-size: 4em;
+}
 
 footer {
 
@@ -104,7 +113,6 @@ footer {
     border-radius: 1.25rem 1.25rem 0 0;
     padding: 1.1em;
     text-align: center;
-
 }
 
 footer p {
@@ -115,7 +123,11 @@ footer p {
 @media(min-width: 60em) {
     article {
         display: grid;
-        grid-template-columns: 33% 33% 33%;
-        grid-gap: 1rem;
+        grid-template-columns: 3% 18% 18% 18% 18% 18%;
+        grid-gap: 0.3rem;
+    }
+
+    h2 {
+        margin-left: -4em;
     }
 }

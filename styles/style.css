@@ -58,23 +58,18 @@ header > img:nth-child(2) {
     margin-top: 3em;
     overflow: hidden;
     position: relative;
-
-
 }
 
 h1 {
-    text-align: center;
+    text-align:left;
     position: absolute;
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: darkblue;
     font-size: 3em;
-
-
-
+    font-weight: bolder;
 }
-
 
 .cls-1 {
     fill: #fff;
@@ -91,12 +86,6 @@ h1 {
     stroke-linecap: round;
     stroke-linejoin: round;
 }
-
-
-
-
-
-
 section {
     display: flex;
 }
@@ -131,11 +120,6 @@ section:nth-child(2) {
 
 }
 
-
-
-
-
-
 .search {
     position: absolute;
     right: 0;
@@ -147,7 +131,6 @@ section:nth-child(2) {
     margin-bottom: 0.625rem;
 
 }
-
 
 section svg {
     position: absolute;
@@ -211,9 +194,6 @@ section h2 {
 
 }
 
-
-
-
 main > form {
     display: flex;
     margin: 0.8em;
@@ -229,9 +209,6 @@ main > form {
     transition: height 0.3s ease-in;
 
 }
-
-
-
 
 main > form button {
     align-self: center;
@@ -330,12 +307,6 @@ aside {
     grid-column: 1 / -1;
     color: white;
 }
-
-
-
-
-
-
 
 article {
     box-shadow: 0 0.125rem 0 0 rgba(7, 7, 33, .15);
@@ -529,11 +500,9 @@ footer svg {
     animation: train 3s infinite;
     animation-timing-function: linear;
     z-index: 4;
-
-
-
 }
 
+/*svg*/
 .st0 {
     fill: #253B7C;
 }
